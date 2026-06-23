@@ -50,3 +50,13 @@ Data Augmentation
 Early Stopping
 ReduceLROnPlateau
 Model Checkpointing
+
+
+
+
+📊 Results
+Metric	Value
+Validation Accuracy	97.52%
+Training Accuracy	95.06%
+Classes	38
+Dataset Size	70,000+ Images
