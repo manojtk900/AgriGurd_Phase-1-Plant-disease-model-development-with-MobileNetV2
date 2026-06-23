@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detection System</title>
+
+```
+<style>
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial,sans-serif;
+    }
+
+    body{
+        background:#f4f8f4;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        min-height:100vh;
+    }
+
+    .container{
+        width:90%;
+        max-width:700px;
+        background:white;
+        padding:30px;
+        border-radius:15px;
+        box-shadow:0 0 20px rgba(0,0,0,0.1);
+        text-align:center;
+    }
+
+    h1{
+        color:#2e7d32;
+        margin-bottom:20px;
+    }
+
+    .upload-box{
+        border:2px dashed #4caf50;
+        padding:30px;
+        border-radius:10px;
+        margin-bottom:20px;
+    }
+
+    input[type="file"]{
+        margin:15px 0;
+    }
+
+    button{
+        background:#2e7d32;
+        color:white;
+        border:none;
+        padding:12px 25px;
+        border-radius:8px;
+        cursor:pointer;
+        font-size:16px;
+    }
+
+    button:hover{
+        background:#1b5e20;
+    }
+
+    .result{
+        margin-top:25px;
+        padding:20px;
+        background:#e8f5e9;
+        border-radius:10px;
+    }
+
+    .disease{
+        color:#d32f2f;
+        font-size:22px;
+        font-weight:bold;
+    }
+
+    .confidence{
+        color:#1565c0;
+        font-size:18px;
+        margin-top:10px;
+    }
+
+    img{
+        margin-top:20px;
+        width:300px;
+        max-width:100%;
+        border-radius:12px;
+        box-shadow:0 0 10px rgba(0,0,0,0.15);
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+<div class="container">
+
+```
+<h1>🌱 Plant Disease Detection System</h1>
+
+<form
+    action="/predict"
+    method="POST"
+    enctype="multipart/form-data"
+>
+
+    <div class="upload-box">
+
+        <h3>Upload Plant Leaf Image</h3>
+
+        <input
+            type="file"
+            name="file"
+            accept="image/*"
+            required
+        >
+
+        <br>
+
+        <button type="submit">
+            Predict Disease
+        </button>
+
+    </div>
+
+</form>
+
+{% if prediction %}
+
+<div class="result">
+
+    <h2>Prediction Result</h2>
+
+    <p class="disease">
+        {{ prediction }}
+    </p>
+
+    <p class="confidence">
+        Confidence: {{ confidence }}%
+    </p>
+
+    <img
+        src="{{ image_path }}"
+        alt="Uploaded Image"
+    >
+
+</div>
+
+{% endif %}
+```
+
+</div>
+
+</body>
+</html>
