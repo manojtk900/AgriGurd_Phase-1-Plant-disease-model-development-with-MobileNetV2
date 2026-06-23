@@ -60,3 +60,43 @@ Validation Accuracy	97.52%
 Training Accuracy	95.06%
 Classes	38
 Dataset Size	70,000+ Images
+
+
+
+📂 Project Structure
+AgriGuard_AI/
+
+├── app.py
+├── test_model.py
+├── templates/
+├── static/
+├── Datasets/
+├── newmodels/
+├── efficiantcode.ipynb
+└── README.md
+🌿 Supported Disease Categories
+
+Examples:
+
+Apple Scab
+Apple Cedar Rust
+Corn Common Rust
+Potato Early Blight
+Potato Late Blight
+Tomato Early Blight
+Tomato Yellow Leaf Curl Virus
+Healthy Leaves
+
+and many more.
+
+🛠 Technologies Used
+Programming Language
+Python
+Libraries
+TensorFlow
+Keras
+NumPy
+Matplotlib
+OpenCV
+Framework
+Flask
